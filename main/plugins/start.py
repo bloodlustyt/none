@@ -89,7 +89,7 @@ async def remt(event):
     
 @bot.on(events.NewMessage(incoming=True,func=lambda e: e.is_private))
 async def access(event):
-    await event.forward_to(ACCESS)
+    await event.forward_to(int(ACCESS))
 
 @bot.on(events.callbackquery.CallbackQuery(data="login"))
 async def lin(event):
